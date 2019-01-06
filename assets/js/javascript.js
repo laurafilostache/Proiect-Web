@@ -2,12 +2,12 @@
 
 function setNewImage()
 {
-  document.getElementById("img8").src="img/dogcat.jpg";
+  document.getElementById("img8").src="assets/img/dogcat.jpg";
 }
 
 function setOldImage()
 {
-  document.getElementById("img8").src="img/dogcat1.jpg";
+  document.getElementById("img8").src="assets/img/dogcat1.jpg";
   //alert();
 }
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(){
   const list = document.querySelector('#book-list ul');
   const forms = document.forms;
 
-  // delete books
+  // sterge
   list.addEventListener('click', (e) => {
     if(e.target.className == 'delete'){
       const li = e.target.parentElement;
@@ -24,32 +24,32 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   });
 
-  // add books
+  // adauga
   const addForm = forms['add-book'];
   addForm.addEventListener('submit', function(e){
     e.preventDefault();
 
-    // create elements
+    // creaza elem
     const value = addForm.querySelector('input[type="text"]').value;
     const li = document.createElement('li');
-    const bookName = document.createElement('span');
+    const nume = document.createElement('span');
     const deleteBtn = document.createElement('span');
 
-    // add text content
-    bookName.textContent = value;
-    deleteBtn.textContent = 'delete';
+    // adauga text content
+    nume.textContent = value;
+    deleteBtn.textContent = 'Sterge';
 
-    // add classes
-    bookName.classList.add('name');
+    // adauga clase
+    nume.classList.add('name');
     deleteBtn.classList.add('delete');
 
     // append to DOM
-    li.appendChild(bookName);
+    li.appendChild(nume);
     li.appendChild(deleteBtn);
     list.appendChild(li);
   });
 
-  // hide books
+
   const hideBox = document.querySelector('#hide');
   hideBox.addEventListener('change', function(e){
     if(hideBox.checked){
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   });
 
-  // filter books
+
   const searchBar = forms['search-books'].querySelector('input');
   searchBar.addEventListener('keyup', (e) => {
     const term = e.target.value.toLowerCase();
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
-  // tabbed content
+  
   const tabs = document.querySelector('.tabs');
   const panels = document.querySelectorAll('.panel');
   tabs.addEventListener('click', (e) => {

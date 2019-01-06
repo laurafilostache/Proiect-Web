@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
-  
+
   const tabs = document.querySelector('.tabs');
   const panels = document.querySelectorAll('.panel');
   tabs.addEventListener('click', (e) => {

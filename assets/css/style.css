@@ -14,7 +14,7 @@ body {
     position: relative;
     padding: 80px;
     text-align: center;
-    background-image: url("../img/dogcat1.jpg");
+    background-image: url("..assets/img/dogcat1.jpg");
     background-size: cover;
     color: #ff9999;
 }
