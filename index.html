@@ -1,0 +1,80 @@
+<!-- taguri semantice folosite: header, nav, section, footer -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Proiect Dezvoltare Web</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header class="header">
+  <h1>Iubitorii de animale</h1>
+</header>
+
+
+
+
+
+
+<nav class="navbar">
+  <a href="index.html" class="active">Acasa</a>
+  <a href="pisici.html">Pisici</a>
+  <a href="caini.html">Caini</a>
+
+</nav>
+
+<section>
+<h2 class="txt"> Cei mai buni prieteni ai nostri sunt animalele, in animale gasesti acel devotament fara cuvinte,
+  pentru ca sunt creaturi minunate si animalele joaca aici pe pamant roluri de ingeri pentru stapanii lor.</h2>
+
+
+  <div class="center">
+    <img id="img8" onmouseover="setNewImage()" onmouseout="setOldImage()"
+    src="assets/img/dogcat1.jpg" width="300" />
+  </div>
+  </section><br><br>
+
+
+    <div class="text-center">
+      <h2>Tu de ce iubesti animalele?</h2>
+    </div>
+
+    <div id="wrapper">
+    <div id="book-list">
+    	    	<h2 class="title">Adauga o trasatura a animalutului tau!</h2>
+    	    	<ul>
+    	    		<li>
+    	    			<span class="name">iubitor</span>
+    	    			<span class="delete">Sterge</span>
+    	    		</li>
+    	    		<li>
+    	    			<span class="name">jucaus</span>
+    	    			<span class="delete">Sterge</span>
+    	    		</li>
+    	    		<li>
+    	    			<span class="name">pufos</span>
+    	    			<span class="delete">Sterge</span>
+    	    		</li>
+    	    		<li>
+    	    			<span class="name">ingeras</span>
+    	    			<span class="delete">Sterge</span>
+    	    		</li>
+    	    	</ul>
+    	    </div>
+    	    <form id="add-book">
+    	    	<input type="text" placeholder="Adauga o trasatura:" />
+    	    	<button>Adauga</button>
+    	    </form>
+
+
+  <footer class="footer">
+    <h2>Proiect realizat de Filostache Laura Maria</h2>
+  </footer>
+
+  <script src="javascript.js"></script>
+
+</body>
+</html>
