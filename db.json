@@ -1,0 +1,16 @@
+{
+  "pareri": [
+    {
+      "numesiprenume": "Ana Maria",
+      "numecaine": "Lola",
+      "parere": "Caine frumos",
+      "id": 1
+    },
+    {
+      "numesiprenume": "Filostache Laura",
+      "numecaine": "Sasha",
+      "parere": "Cel mai cuminte caine",
+      "id": 2
+    }
+  ]
+}

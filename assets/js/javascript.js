@@ -91,3 +91,72 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 
 })
+
+function addParere() {
+  var data = {};
+  var parereUrl = "http://localhost:3000/pareri";
+
+  data.numesiprenume  = document.getElementById("numesiprenume").value;
+  data.numecaine  = document.getElementById("numecaine").value;
+  data.parere  = document.getElementById("parere").value;
+  var json = JSON.stringify(data);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", parereUrl, true);
+  xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+  xhr.onload = function () {
+  	var comments = xhr.responseText;
+  	if (xhr.readyState == 4 && xhr.status == "201") {
+  		console.table(comments);
+  	} else {
+  		console.error(comments);
+  	}
+  }
+  xhr.send(json);
+}
+
+//get pareri
+var reviewurl  = "http://localhost:3000/pareri";
+var xhr  = new XMLHttpRequest();
+xhr.open('GET', reviewurl, true);
+xhr.onload = function () {
+ var datas = JSON.parse(xhr.responseText);
+
+ if (xhr.readyState == 4 && xhr.status == "200") {
+
+  var info = new Array();
+       info = datas;
+
+       var news = document.getElementsByClassName("pareri")[0];
+
+       for(var i = 0; i < info.length; i++) {
+           var h5 = document.createElement("input");
+           h5.setAttribute('value', info[i].id);
+           h5.setAttribute('id', "id");
+           var id = info[i].id;
+           news.appendChild(h5);
+
+           var p = document.createElement("input");
+           p.setAttribute('value', info[i].numesiprenume);
+           p.setAttribute('id', "numesiprenume");
+           news.appendChild(p);
+
+           var p = document.createElement("input");
+           p.setAttribute('value', info[i].numecaine);
+           p.setAttribute('id', "numecaine");
+           news.appendChild(p);
+
+           var p = document.createElement("input");
+           p.setAttribute('value', info[i].parere);
+           p.setAttribute('id', "parere");
+           news.appendChild(p);
+
+           var br = document.createElement("br");
+           news.appendChild(br);
+       }
+
+ } else {
+   console.error(datas);
+ }
+}
+xhr.send(null);
